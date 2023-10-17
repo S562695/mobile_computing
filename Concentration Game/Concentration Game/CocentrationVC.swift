@@ -22,10 +22,10 @@ class CocentrationVC: UIViewController {
         if button.currentTitle == emoji
         {
             button.setTitle("", for: UIControl.State.normal)
-            button.backgroundColor = UIColor(red: 0.2, green: 0.4, blue: 1.0, alpha: 0.5)
+            button.backgroundColor = UIColor.systemOrange
         } else{
             button.setTitle(emoji, for: UIControl.State.normal)
-            button.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0.5)
+            button.backgroundColor = UIColor.white
         }
     }
     /*
