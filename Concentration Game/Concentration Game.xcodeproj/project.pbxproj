@@ -52,7 +52,7 @@
 		381A9FD82ADF23A100B13D27 /* Concentration GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Concentration GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		381A9FDC2ADF23A100B13D27 /* Concentration_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration_GameUITests.swift; sourceTree = "<group>"; };
 		381A9FDE2ADF23A100B13D27 /* Concentration_GameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration_GameUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		381A9FEB2ADF24F500B13D27 /* CocentrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocentrationVC.swift; sourceTree = "<group>"; };
+		381A9FEB2ADF24F500B13D27 /* CocentrationVC.swift */ = {isa = PBXFileReference; indentWidth = 0; lastKnownFileType = sourcecode.swift; path = CocentrationVC.swift; sourceTree = "<group>"; tabWidth = 1; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

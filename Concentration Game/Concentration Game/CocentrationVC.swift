@@ -14,12 +14,27 @@ class CocentrationVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }*/
+    var flipCount: Int = 0 {
+        didSet{
+            flipCountLabel.text = "Flips: \(flipCount)"
+        }
+    }      //number of times we flip the card
+    //Initialize to 0
+    
+    @IBOutlet var cardbuttons: [UIButton]!
+    
     @IBAction func touchCard(_ sender: UIButton) {
         //print("agh! a ghost!")
-        flipCard(withEmoji: "👻", on: sender)
+        
+        flipCount += 1
+        let cardNumber = cardbuttons.firstIndex(of: sender)!  //we use let for constants in swift
+        print("cardNumber = \(cardNumber)")
+        //flipCountLabel.text = "Flips: \(flipCount)"
+        //flipCard(withEmoji: "👻", on: sender) for every card it needs to be different emojis
+        
     }
     func flipCard(withEmoji emoji:String, on button: UIButton){
-        print("flipCard(withEmoji: \(emoji))")
+        print("flipCard(withEmoji: \(emoji)")
         if button.currentTitle == emoji
         {
             button.setTitle("", for: .normal)
@@ -30,9 +45,16 @@ class CocentrationVC: UIViewController {
         }
     }
     
-    @IBAction func touchSecondCard(_ sender: UIButton) {
+    /*@IBAction func touchSecondCard(_ sender: UIButton) {
+        flipCount += 1
+        //flipCountLabel.text = "Flips: \(flipCount)"
         flipCard(withEmoji: "🎃", on: sender)
-    }
+    }*/
+    
+    @IBOutlet weak var flipCountLabel: UILabel!
+    
+    
+    
     
     /*
     // MARK: - Navigation
