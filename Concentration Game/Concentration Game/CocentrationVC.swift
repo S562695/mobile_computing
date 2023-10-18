@@ -27,10 +27,15 @@ class CocentrationVC: UIViewController {
         //print("agh! a ghost!")
         
         flipCount += 1
-        let cardNumber = cardbuttons.firstIndex(of: sender)!  //we use let for constants in swift
-        print("cardNumber = \(cardNumber)")
+    if let cardNumber = cardbuttons.firstIndex(of: sender) {
+        // Use cardNumber here
+    print("cardNumber:\(cardNumber)")
+    }
+    else{
+    print("chosen card is not in the list")
+    }
         //flipCountLabel.text = "Flips: \(flipCount)"
-        //flipCard(withEmoji: "👻", on: sender) for every card it needs to be different emojis
+        flipCard(withEmoji: "👻", on: sender) //for every card it needs to be different emojis
         
     }
     func flipCard(withEmoji emoji:String, on button: UIButton){
