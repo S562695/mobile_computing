@@ -22,6 +22,8 @@ class CocentrationVC: UIViewController {
     //Initialize to 0
     
     @IBOutlet var cardbuttons: [UIButton]!
+
+     var emojiChoices = ["🎃","👻","🐼","🎃","👻","🐼"]
     
     @IBAction func touchCard(_ sender: UIButton) {
         //print("agh! a ghost!")
@@ -29,16 +31,18 @@ class CocentrationVC: UIViewController {
         flipCount += 1
     if let cardNumber = cardbuttons.firstIndex(of: sender) {
         // Use cardNumber here
-    print("cardNumber:\(cardNumber)")
+        flipCard(withEmoji: emojiChoices[cardNumber], on: sender)
+    //print("cardNumber:\(cardNumber)")
     }
     else{
-    print("chosen card is not in the list")
+          print("chosen card is not in the list")
     }
         //flipCountLabel.text = "Flips: \(flipCount)"
-        flipCard(withEmoji: "👻", on: sender) //for every card it needs to be different emojis
+        //flipCard(withEmoji: "👻", on: sender) //for every card it needs to be different emojis
         
     }
     func flipCard(withEmoji emoji:String, on button: UIButton){
+        
         print("flipCard(withEmoji: \(emoji)")
         if button.currentTitle == emoji
         {
